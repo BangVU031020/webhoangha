@@ -4,4 +4,5 @@ $(function () {
     $("#nav").load("./common/nav.html");
     $("#slider").load("./common/slider.html");
     $("#footer").load("./common/footer.html");
+    $("#corevalue").load("./common/corevalue.html");
 });

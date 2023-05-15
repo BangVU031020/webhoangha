@@ -13190,45 +13190,45 @@ jQuery.fn.extend({
         })
     }
 });
-$(function () {
-    var i = jQuery.ajax,
-        n, t;
-    jQuery.ajaxSetup({
-        timeout: 6e4
-    });
-    jQuery.ajax = function () {
-        return NProgress.start(), i.apply(this, arguments).done(function () {
-            NProgress.done()
-        }).fail(function () {
-            $.toast({
-                text: "Có lỗi rảy ra, vui lòng bấm F5 để thử lại"
-            });
-            NProgress.done()
-        })
-    };
-    n = jQuery.get;
-    jQuery.get = function () {
-        return NProgress.start(), n.apply(this, arguments).done(function () {
-            NProgress.done()
-        }).fail(function () {
-            $.toast({
-                text: "Có lỗi rảy ra, vui lòng bấm F5 để thử lại"
-            });
-            NProgress.done()
-        })
-    };
-    t = jQuery.post;
-    jQuery.post = function () {
-        return NProgress.start(), t.apply(this, arguments).done(function () {
-            NProgress.done()
-        }).fail(function () {
-            $.toast({
-                text: "Có lỗi rảy ra, vui lòng bấm F5 để thử lại"
-            });
-            NProgress.done()
-        })
-    }
-});
+// $(function () {
+//     var i = jQuery.ajax,
+//         n, t;
+//     jQuery.ajaxSetup({
+//         timeout: 6e4
+//     });
+//     jQuery.ajax = function () {
+//         return NProgress.start(), i.apply(this, arguments).done(function () {
+//             NProgress.done()
+//         }).fail(function () {
+//             $.toast({
+//                 text: "Có lỗi rảy ra, vui lòng bấm F5 để thử lại"
+//             });
+//             NProgress.done()
+//         })
+//     };
+//     n = jQuery.get;
+//     jQuery.get = function () {
+//         return NProgress.start(), n.apply(this, arguments).done(function () {
+//             NProgress.done()
+//         }).fail(function () {
+//             $.toast({
+//                 text: "Có lỗi rảy ra, vui lòng bấm F5 để thử lại"
+//             });
+//             NProgress.done()
+//         })
+//     };
+//     t = jQuery.post;
+//     jQuery.post = function () {
+//         return NProgress.start(), t.apply(this, arguments).done(function () {
+//             NProgress.done()
+//         }).fail(function () {
+//             $.toast({
+//                 text: "Có lỗi rảy ra, vui lòng bấm F5 để thử lại"
+//             });
+//             NProgress.done()
+//         })
+//     }
+// });
 jQuery.event.special.touchstart = {
     setup: function (n, t, i) {
         t.includes("noPreventDefault") ? this.addEventListener("touchstart", i, {
